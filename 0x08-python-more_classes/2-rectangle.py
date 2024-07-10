@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a class rectangle
+Defines a class Rectangle
 """
 
 
@@ -26,18 +26,18 @@ class Rectangle:
         self.__width = value
 
     @property
-        def height(self):
-            """getter for the private instance attribute height"""
-            return self.__height
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
 
     @height.setter
-        def height(self, value):
+    def height(self, value):
         """setter for the private instance attribute height"""
         if type (value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
-              raise ValueError("height must be >= 0")
-        self.__height = value                                                                                          
+                 raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """returns area of the rectangle"""
