@@ -6,7 +6,7 @@ class Rectangle:
     '''This class defines a simple rectangle'''
 
     number_of_instances = 0
-    '''int: The number of active /instances.'''
+    '''int: The number of active instances.'''
 
     print_symbol = '#'
     '''type: Print symbol, can be any type.'''
@@ -59,23 +59,23 @@ if value < 0:
         self.__width = value
 
     def area(self):
-        '''returns area of the rectangle.'''
+        '''Returns area of the rectangle.'''
         return self.width * self.height
 
     def perimeter(self):
-        '''returns perimeter of the rectangle'''
+        '''Returns perimeter of the rectangle.'''
         if not self.width or not self.height:
             return 0
         return (self.width + self.height) * 2
 
     def __str__(self):
-        '''returns string representation.'''
+        '''Returns string representation.'''
         if not self.width or not self.height:
             return ""
         return ((str(self.print_symbol) * self.width + "\n") * self.height)[:-1]
 
     def __repr__(self):
-        '''returns formal string representation...'''
+        '''Returns formal string representation...'''
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
